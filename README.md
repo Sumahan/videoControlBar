@@ -1,0 +1,2 @@
+# videoControlBar
+A video plugin
