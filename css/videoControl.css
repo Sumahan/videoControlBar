@@ -1,0 +1,134 @@
+.video-alert-body{
+	margin:0 auto;
+	position:relative;
+	/* overflow:hidden; */
+	border-radius:5px;
+	display:inline-block;
+}
+.video-alert-body video{
+	max-width:100%;
+	max-height:100%;
+	display: block;
+	margin-bottom: 40px;
+}
+.close-video{
+	position:absolute;
+	top:0;
+	right:0;
+	width:34px;
+	height:34px;
+	background-color:red;
+	background:url(../img/close-video.png) no-repeat 0 0;
+	background-size: cover;
+}
+/*videoControl start*/
+.video-control{
+	position: absolute;
+    width: 100%;
+    text-align: left;
+    bottom: 0;
+    z-index: 99;
+    height: 40px;
+    line-height: 40px;
+    background: #0F96FF;
+}
+.video-control>div{
+	float: left;
+}
+.video-control-left{
+	width:100%;
+	margin-right: -200px;
+}
+.video-control-right{
+	width: 200px;
+}
+.video-control-aside{
+	float: left;
+	width: 140px;
+}
+.video-control-center{
+	width: auto;
+	margin-left:150px;
+	margin-right:210px;
+	margin-top:20px;
+}
+.video-control-aside>div,.video-control-right>div{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	color:#fff;
+}
+.video-progress,.video-volume{
+	width:100%;
+	float: none;
+	position: relative;			
+	height: 2px;
+	background: #6FC0FF;			
+}
+.video-volume{
+	width:55%;
+}
+.video-volume>span:first-child{
+	width:100%;
+}
+.video-volume>span:last-child{
+	margin-left:100%;
+}
+.video-progress-bar,.video-volume-bar{
+	background: #fff;
+    height: 100%;
+    float: left;
+}
+.video-progress-point,.video-volume-point{
+	width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    left: -5px;
+    position: absolute;
+    top: -4px;
+}
+.video-progress-point:hover,.video-volume-point:hover{
+	cursor:pointer;
+}
+.pause-paly-switch,.fullscreen-switch,.volume-switch{
+	width: 30px;
+ 	height: 30px;
+  	background: url(../image/pp.png) no-repeat 0 0;
+}		
+.volume-switch{
+	background: url(../image/voice.png) no-repeat 0 1px;
+}
+.pause-paly-switch.pause,.volume-switch.novolume{
+	background-position: 0 -29px;
+}
+.fullscreen-switch{
+    background:url(../image/fullscreen.png) no-repeat -4px -2px;
+}
+#learning-video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+/*全锟斤拷*/
+.video-alert-body:-webkit-full-screen{
+	width:100%;
+	height:100%;
+	margin-top:0;
+}
+/*ie10*/
+ .fullScreen{
+	position: fixed;
+	top:0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index:999999;
+} 
+.fullScreen ~ .video-control{
+	position: fixed;
+	left:0;
+	bottom:0;
+	z-index:9999999;
+}
+.fullscreen-switch.open{
+	background-position:-4px -30px;
+}
