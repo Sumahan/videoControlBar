@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/videoControl.css"> -->
+	<link rel="stylesheet/less" type="text/css" href="css/styles.less"> 
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/less.min.js"></script>
+	<script type="text/javascript" src="js/videoControl.js"></script>
+
+</head>
+<body>
+	<div class="video-alert-body">
+		<video id="learning-video" src="http://obs.cn-north-1.myhwclouds.com:80/hdc-2017/开发者大赛2017/学习视频/GLXSS-穿戴式设备的应用/GLXSS-穿戴式设备的应用.mp4" autoplay="">
+		</video>
+		<div class="video-control" ondragstart="return false"> 
+			<div class="video-control-left"> 
+				<div class="pause-paly-switch">
+				</div>
+				<div class="video-current-time"> 
+					<span id="current-time">00:03</span> / <span id="total-time">11:15</span> 
+				</div> 
+				<div class="video-progress"> 
+				 	<span class="video-progress-bar" style="width: 0.475252%;"></span>  
+				 	<span class="video-progress-point" style="margin-left: 0.475252%;"></span> 
+				</div>  
+			 </div>	
+			<div class="video-control-right">
+			 	<div class="volume-switch"></div> 
+				<div class="video-volume"> 
+					<span class="video-volume-bar"></span> 
+					<span class="video-volume-point"></span> 
+				</div> 
+				<div class="fullscreen-switch"></div>
+			</div>
+		</div>
+	  </div>
+	  <script>
+	  	$('#learning-video').videoControl();
+	  </script>
+</body>
+</html>
